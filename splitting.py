@@ -1,6 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter 
 
-
 class Splitter : 
    text = "nothing"
    def __init__(self , text = "Hello") : 
