@@ -3,14 +3,23 @@ from langchain_community.document_loaders import TextLoader
 file_path = "data/data1.txt" ; 
 
 
-try : 
-      loader = TextLoader(file_path , encoding="utf-8")
+class PromptLoader : 
 
-      documents = loader.load()
+      def __init__(self) : 
+            pass
 
-      print(documents[0].page_content)
 
-except Exception as e: 
-      print(f"An error occured : {e}")
+      def load_prompt(self) : 
+            try : 
+                  loader = TextLoader(file_path , encoding="utf-8")
+
+                  documents = loader.load()
+
+                  return documents[0].page_content
+
+            except Exception as e: 
+                  print(f"An error occured : {e}")
+
+
 
 
